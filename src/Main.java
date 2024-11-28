@@ -1,11 +1,16 @@
-import java.util.Queue;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    public static void main(String[] args) throws wrongPiority {
+    public static void main(String[] args) {
+        try {
             TaskQueue taskQueue = new TaskQueue();
-            taskQueue.addSmth("Задача 1", 6);
+            taskQueue.addSmth("Задача 1", 4);
+            taskQueue.displayTasks();
+            taskQueue.updatePriority("Задача 1",5);
+            taskQueue.displayTasks();
+        } catch (wrongPriority e) {
+            throw new RuntimeException(e);
+        }
+
 
     }
     }
